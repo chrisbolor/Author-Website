@@ -1,0 +1,541 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Oswald|Roboto+Condensed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes bgLoad {
+	0% {
+		opacity: 0;
+		transform: scaleX(1.1) scaleY(1.1) rotate(-5deg);
+		background-image: url(bg1.jpg);
+		background-position: 0px 0px;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
+
+	100% {
+		opacity: 1;
+		transform: scaleX(1) scaleY(1) rotate(0);
+		background-image: url(bg1.jpg);
+		background-position: 0px 0px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
+@keyframes bgChange {
+	0% {
+		opacity: 1;
+		transform: scaleX(1) scaleY(1) rotate(0);
+		background-image: url(bg1.jpg);
+		background-position: 0px 0px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	100% {
+		opacity: 1;
+		transform: scaleX(1.1) scaleY(1.1) rotate(-5deg);
+		background-image: url(bg2.jpg);
+		background-position: 0px 0px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
+
+@keyframes logoLoad {
+	0% {
+		margin-left: -50%;
+	}
+	100% {
+		margin-left: 6.25%;
+
+	}
+}
+
+
+@keyframes fadeIn {
+	0% {
+		filter: opacity(0);
+	}
+
+	100% {
+		filter: opacity(100);
+	}
+}
+
+@keyframes zoomIn {
+	0% {
+		width: 100%;
+	}
+
+	100% {
+		width: 115%;
+	}
+}
+
+@keyframes zoomOut {
+	0% {
+		width: 115%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+*, html {
+	box-sizing: border-box;
+	font-family: 'Oswald', 'Roboto Condensed', sans-serif;
+	font-size: 16px;
+}
+
+p {
+	font-family: 'Oswald', sans-serif;
+	line-height: 2.5rem;
+	font-size: 1.25rem;
+}
+
+h1, h2, h3, {
+	font-family: 'Bad Script', cursive;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+
+
+
+
+
+#bgWrapper {
+	/*
+	animation-name: bgLoad;
+	animation-duration: 8s;
+	background-image: url(bg1.jpg);
+	background-position: 0px 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	*/
+
+	/*position: fixed;
+	z-index: 0;
+	width: 1000px;
+	height: 1000px;*/
+
+	display: none;
+}
+
+*::scrollbar {
+	display: none;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+*::-moz-scrollbar, *::-ms-scrollbar, *::-o-scrollbar, {
+	display: none;
+}
+
+
+* {box-sizing: border-box; margin: 0; padding: 0;font-family: "Roboto Condensed", sans-serif; }
+
+
+
+
+a, a:link, a:visited {
+	font-size: inherit;
+	font-family: "Oswald", sans-serif;
+	color: blue;
+}
+
+a:hover, a:focus, a:active {
+	color: white;
+	text-shadow: .125rem .125rem .125rem rgba(0,0,0,.5);
+}
+
+body {
+	background-color: grey;
+}
+
+blockquote {
+	text-align: right;
+	font-style: italic;
+}
+
+ nav ul, nav ul li {
+	list-style-type: none;
+}
+
+
+#wrapper {
+
+}
+
+#inner-wrapper {
+	background-color: #1F1F1F;
+	overflow: auto;
+
+	outline: #000000 5px inset;
+}
+
+#nav {
+	background-color: #363636;
+	clear: both;
+	position: fixed;
+	z-index: 9999;
+	box-shadow: 0em 2em 4em rgba(0,0,0,.5);
+	font-family: 'Bad Script', cursive;
+}
+
+#nav-menu {
+	background-color: ;
+	float: right;
+	right: -.1em;
+	position: absolute;
+	display: inline-block;
+	margin-right: 6.25%;
+}
+
+#nav-menu li {
+	display: inline-block;
+	float: left;
+	position: relative;
+	padding: 1.1em;
+}
+
+#nav-menu li:hover, #nav-menu li:active, #nav-menu li:focus {
+	background-color: #ebc50e;
+	color: #363636;
+}
+
+#nav-menu li a {
+	text-justify: center;
+	color: #ebc50e;
+	font-family: 'Bad Script', cursive;
+	font-weight: bolder;
+	text-shadow: .125rem .125rem .125rem rgba(0,0,0,.7);
+	font-size: 1.25rem;
+	height: 100%;
+	width: 100%;
+}
+
+#nav-menu li a:focus, #nav-menu li a:hover, #nav-menu li:active {
+	color: #363636;
+}
+
+#nav-menu li a, #nav-menu li a:visited, #nav-menu li a:link {
+	text-decoration: none;
+}
+
+h1#logo {
+	float: left;
+	display: inline-block;
+	background-color: ;
+	font-family: "Oswald", sans-serif;
+	margin-left: 6.25%;
+	height: 100%;
+	margin-top: -.25rem;
+	font-size: 3rem;
+	text-shadow: .25rem .25rem .5rem rgba(0,0,0,.5);
+	color: #ebc50e;
+}
+
+h1#logo:hover, h1#logo:active, h1#logo:focus {
+	color: rgba(225,225,225,1);
+}
+
+.mainSection {
+	width: 100%;
+	height: 100%;
+	clear: both;
+	padding: 0;
+}
+
+.mainSection content {
+	margin-top: 75px;
+}
+
+.mainSection content h3 {
+	font-family: "Bad Script", cursive;
+	font-weight: bolder;
+	color: #ebc50e;
+	text-shadow: .125rem .125rem .125rem rgba(0,0,0,.5);
+}
+
+.learnMore {
+	text-align: right;
+	font-size: 1rem;
+	float: right;
+	clear: left;
+}
+
+#main1 {
+	background-image: url(bg1.jpg);
+	animation-name: bgLoad;
+	animation-duration: 8s;
+	background-image: url(bg1.jpg);
+	background-position: 0px 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 10;
+}
+
+#main1-left-col {
+	margin-left: 6.25%;
+	float: left;
+	position: relative;
+	color: white;
+	text-shadow: 5px 5px 5px rgba(0,0,0,.7);
+}
+
+
+#main1-right-col {
+	float: right;
+	margin-right: 6.25%;
+	overflow: ;
+}
+
+#main1 button {
+	height: 50px;
+	margin-bottom: 2em;
+}
+
+#buyBTN-left {
+	float: left;
+	background-image: url(btn-store.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 0;
+	border-radius: 8px;
+	box-shadow: 0 0 1em rgba(255,255,255,.5);
+}
+
+#buyBTN-right {
+	float: right;
+	background-image: url(btn-amzn.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 0;
+	border-radius: 8px;
+	box-shadow: 0 0 1em rgba(255,255,255,.5);
+}
+
+#buyBTN-left:hover, #buyBTN-left:active, #buyBTN-left:focus, #buyBTN-right:hover, #buyBTN-right:active, #buyBTN-right:focus {
+	box-shadow: inset 0 .5em .5em rgba(0,0,0,.7);
+}
+
+
+#book-cover {
+	width: 100%;
+	box-shadow: .5rem .5rem .5rem rgba(0,0,0,.7);
+	filter: opacity(0);
+	animation-name: zoomOut;
+	animation-duration: 1.2s;
+	float: right;
+}
+
+#book-cover:hover, #book-cover:active, #book-cover:focus {
+	animation-name: zoomIn;
+	animation-duration: 1.2s;
+	width: 115%;
+	filter: opacity(100);
+}
+
+#main2 {
+	background-image: url(bg2.jpg);
+	background-position: 0px 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 20;
+	box-shadow: 0em -2em 2em rgba(0,0,0,.7);
+	color: white;
+}
+
+#main2-right-col {
+	margin-right: 6.25%;
+	float: right;
+
+}
+
+#main3 {
+	background-image: url(bg3.jpg);
+	background-position: 0px 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 30;
+	box-shadow: 0em -2em 2em rgba(0,0,0,.7);
+	color: white;
+}
+
+#main3-left-col {
+	margin-left: 6.25%;
+	float: left;
+
+}
+
+#main3-right-col {
+	margin-right: 6.25%;
+	float: right;
+}
+
+#main4 {
+	background-image: url(bg4.jpg);
+	background-position: 0px 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 40;
+	box-shadow: 0em -2em 2em rgba(0,0,0,.7);
+}
+
+#main4-left-col {
+	margin-left: 6.25%;
+	float: left;
+}
+
+#main4-right-col {
+	margin-right: 6.25%;
+	float: right;
+}
+
+#main1, #main2, #main3, #main4 {
+	width: 100%;
+}
+
+
+
+#main2-left-col {
+	background-color: ;
+}
+
+#main2-right-col {
+	background-color: ;
+}
+
+#main3-left-col {
+	background-color: ;
+}
+
+#main3-right-col {
+	background-color: ;
+}
+
+#main4-left-col {
+	background-color: ;
+}
+
+#main4-right-col {
+	background-color: ;
+}
+
+content {
+	display: block;
+	position: relative;
+	float: left;
+}
+
+
+
+footer {
+	height: 75%;
+	background-color: rgba(60,60,60,1);
+	box-shadow: inset 0em 4em 4em rgba(0,0,0,.35);
+	padding-top: 6em;
+	padding-bottom: 2.5em;
+	text-shadow: .125rem .125rem .125rem rgba(0,0,0,.35);
+}
+
+footer a, footer a:link, footer a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+footer a:focus, footer a:active, footer a:hover {
+	color: blue;
+}
+
+footer h3 {
+	font-family: "Oswald", sans-serif;
+	color: #ebc50e;
+	text-shadow: .25rem .25rem .5rem rgba(0,0,0,.5);
+}
+
+footer nav li a {
+	font-size: 1.5rem;
+}
+
+footer nav li {
+	list-style-type: none;
+	margin-left: 1rem;
+}
+
+
+#footer-left-col a, #footer-mid-col a, #footer-right-col a {
+	font-size: 1.5rem;
+}
+
+#footer-left-col {
+	background-color: ;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	margin-right: 10.7954%;
+	margin-left: 6.25%;
+}
+
+#footer-mid-col {
+	background-color: ;
+	height: 100%;
+	display: inline-block;
+	margin-right: 10.7954%;
+}
+
+#footer-right-col {
+	background-color: ;
+	height: 100%;
+	display: inline-block;
+	float: right;
+	margin-right: 6.25%;
+}
+
+#footer-right-col p {
+	margin-left: 1rem;
+	color: white;
+	font-size: 1.5rem;
+}
+
+#footer-right-col a {
+	font-size: 1.5rem;
+}
